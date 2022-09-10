@@ -15,7 +15,7 @@ class CreateAwardsTable extends Migration
     {
         Schema::create('awards', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name') ->unique();
             $table->foreignId('film_id');
             $table->timestamps();
         });

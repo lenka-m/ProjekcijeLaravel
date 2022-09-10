@@ -14,7 +14,7 @@ class DropGlUlogaFromFilmsTable extends Migration
     public function up()
     {
         Schema::table('films', function (Blueprint $table) {
-            $table->dropColumn('gl_uloga');
+           // $table->dropColumn('gl_uloga');
         });
     }
 
