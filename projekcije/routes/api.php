@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AwardController;
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\GenreController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::resource('films', FilmController::class);
+Route::resource('users', UserController::class);
+Route::resource('genres', GenreController::class);
+Route::resource('awards', AwardController::class);
